@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site bonito</title>
+</head>
+<body>
+    <h1>site Bonito</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="botao" onclick="somar()">
+    <div id="res">Resposta</div>
+
+    <script>
+        function somar() {
+            let tn1 = document.getElementById('txtn1')
+            let tn2 = document.getElementById('txtn2')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let S = n1 + n2 
+            res.innerHTML = `A soma dos valores ${n1} e ${n2} é <strong>${S}<strong>.`
+        }
+    </script>
+</body>
+</html>
