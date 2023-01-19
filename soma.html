@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Números</title>
+</head>
+<body>
+    <h1>Somar Números</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="botao" onclick="somar()">
+    <div id="res">Resposta</div>
+
+    <input type="password" name="text" id="text" placeholder="digite sua senha">
+    <button id="botao" onclick="clicar()">mostrar senha</button>
+
+
+<script>
+    function somar() {
+    let tn1 = document.querySelector('input#txtn1')
+    let tn2 = document.querySelector('input#txtn2')
+    let res = document.querySelector('div#res')
+    let n1 = Number(tn1.value)
+    let n2 = Number(tn2.value)
+    let S = n1 + n2
+    res.innerHTML = ` A soma dos Valores ${n1} e ${n2} é ${S}..`
+   }
+
+   function clicar() {
+    let input = document.querySelector('input#text')
+    let botao = document.querySelector('button#botao')
+    if (input.getAttribute('type') === 'text') {
+        input.setAttribute('type','password')
+        botao.innerHTML = 'mostrar senha'
+        
+    }else{
+        input.setAttribute('type', 'text')
+        botao.innerHTML = 'Ocultar senha'
+    }
+   }
+</script>
+</body>
+
+</html>
