@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrescentado Itens</title>
+</head>
+<body>
+
+    <ul>
+        <li>Agum item</li>
+        <li>Algum item</li>
+    </ul>
+
+    <input type="text" placeholder="digite algo">
+
+    <script>
+        let input = document.querySelector('input')
+        let lista = document.querySelector('ul')
+
+        input.addEventListener('keyup',handlekeyUp)
+    function handlekeyUp(e) {
+        if (e.key === 'Enter') {
+            let newLi = document.createElement('li')
+            newLi.innerHTML = input.value
+            lista.appendChild(newLi)
+            input.value = ''
+        }
+    }
+    </script>
+</body>
+</html>

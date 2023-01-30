@@ -7,14 +7,48 @@
     <title>Site de vendas</title>
 </head>
 <body>
-    <section>
-     <div></div>
-    </section>
-    <main>
+    <h1>Lista de compra</h1>
+    <ul>
+        <li>ALgum item</li>
+        <li>Algum item</li>
+    </ul>
+    
+  
 
-    </main>
-    <footer>
+    <input type="password" class="input" name="text" id="senha">
+    <button id="botao"  onclick="clicou()"  >mostrar senha</button>
 
-    </footer>
+    <input type="text" placeholder="digite algo"> <br>
+    
+
+    <script>
+
+
+ let input = document.querySelector('input')
+ let lista = document.querySelector('ul')
+
+ function handleKeyUp(e) {
+    if (e.key === 'Enter') {
+        const newLi = document.createElement('li')
+        newLi.innerHTML = input.value
+        lista.appendChild(newLi)
+        input.value = ''
+    }
+ }
+
+ input.addEventListener('keyup', handleKeyUp)
+
+ let type = document.querySelector('.input')
+ let botao = document.querySelector('#botao')
+ function clicou() {
+    if (input.getAttribute('type') === 'text' ) {
+        input.setAttribute('type', 'password')
+        botao.innerHTML = 'Mostrar Senha'        
+    }else{
+        input.setAttribute('type', 'text')
+        botao.innerHTML = 'Ocular Senha'
+    }
+ }
+    </script>
 </body>
 </html>
