@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Javascript</title>
+</head>
+<body>
+    <h1>Acrescentando itens à lista</h1>
+    <ul>
+        <li>Açucar</li>
+        <li>fubá</li>
+    </ul>
+    <input type="text" placeholder="digite o item">
+
+    <h1>Aprenda a Ocultar senhas</h1>
+    <input type="password" name="text" id="senha">
+    <button class="botao" onclick="clicou()">mostrar senha</button>
+
+    <h1>Somando Números</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somou()">
+    <div id="res">Resposta</div>
+<script>
+    let input = document.querySelector('input')
+    let lista = document.querySelector('ul')
+
+    input.addEventListener('keyup', handleKeyUp)
+    function handleKeyUp(e) {
+        if (e.key === 'Enter') {
+            let newLi = document.createElement('li')
+        newLi.innerHTML = input.value
+        lista.appendChild(newLi)
+        input.value = ''
+        }
+        
+    }
+
+    let texto = document.querySelector('#senha')
+    let button = document.querySelector('.botao')
+
+    function clicou() {
+        if (texto.getAttribute('type')=== 'text') {
+            texto.setAttribute('type', 'password')
+            button.innerHTML = 'Mostar Senha'
+        }else{
+            texto.setAttribute('type', 'text')
+            button.innerHTML = 'Ocultar Senha'
+        }
+    }
+
+    function somou() {
+        let tn1 = document.getElementById('txtn1')
+        let tn2 = document.getElementById('txtn2')
+        let res = document.getElementById('res')
+        let n1 = Number (tn1.value)
+        let n2 = Number (tn2.value)
+        let S = n1 + n2
+        res.innerHTML = ` A soma dos valores de ${n1} e ${n2} é <strong> ${S}</strong>`
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Vamos aprender javascript</h1>
+    <script>
+        var nome = prompt('Bom dia! Qual é o seu nome?')
+        document.write(nome + 'tem'+ idade + 'anos')
+    </script>
+     <script>
+        var idade = prompt('Quantos anos você tem?')
+        var dias = idade * 365
+        document.write('Você já viveu' + dias + 'dias de vida')
+        var batimentos = dias * 24 * 60 * 80
+        document.write('seu coração já bateu' + batimentos + 'vezes. Haja coração')
+     </script>
+
+    
+     <script>
+        var primeira = function(){
+            console.log('1 - antes');
+            segunda()
+            console.log('1 - depois');
+        }
+        var segunda = function(){
+            console.log('2 - antes');
+            terceira()
+            console.log('2 - depois');
+
+        }
+        var terceira = function (){
+            console.log('3');
+
+        }
+        primeira()
+     </script>
+</body>
+</html>

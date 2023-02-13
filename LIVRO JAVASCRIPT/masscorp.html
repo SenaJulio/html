@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massa corporal</title>
+</head>
+<body>
+    <h1>Calcule a Massa coprporal</h1>
+<input type="number" name="peso" id="peso"> /
+<input type="number" name="Altura" class="altura">
+<input type="button" value="calcule" onclick="mostra()">
+<div id="res">Resposta</div>
+
+<script>
+    
+
+    function mostra() {
+        let pesado = document.querySelector('#peso')
+        let altura = document.querySelector('.altura')
+        let res = document.querySelector('#res')
+        let pesa1 = Number(pesado.value)
+        let altura1 = Number(altura.value)
+        let imc = pesa1 / (altura1 * altura1)
+
+        res.innerHTML = `A massa corporal do seu corpo é ${imc}`
+    }
+</script>
+</body>
+</html>
